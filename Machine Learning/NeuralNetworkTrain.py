@@ -11,8 +11,8 @@ class NeuralNetwork:
     def __init__(self, x, y):
         self.input = x
         self.y = y
-        self.weights1 = np.random.rand(self.input.shape[1], 4)       #(3,4) generates 12 weights between [0,1)
-        self.weights2 = np.random.rand(4, 1)
+        self.weights1 = np.random.rand(self.input.shape[1], self.input.shape[0])       #(3,4) generates 12 weights between [0,1)
+        self.weights2 = np.random.rand(self.input.shape[0], 1)
         self.output = np.zeros(y.shape)
 
     def feedforward(self):
